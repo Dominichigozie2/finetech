@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User dashboard</title>
+
+    <!-- ============ Custom CSS =================== -->
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <!-- ============ Font awesome link ===========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" />
+
+    <!-- ============ Swiper CSS Links =================== -->
+    <!-- <link href="https://unpkg.com/swiper@9.0.0/swiper-bundle.min.css" rel="stylesheet"> -->
+    <!-- Swiper JS Links -->
+    <!-- <script src="https://unpkg.com/swiper@9.0.0/swiper-bundle.min.js"></script> -->
+</head>
+
+<body >
+    <div class="container row-container">
+        <div class="topbar">
+            <div class="logo">
+                <img src="./asset/img/logo.png" alt="">
+            </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars-progress"></i>
+            </div>
+            <div class="left-nav">
+                
+            <div class="user">
+                <img src="./asset/img/portrait.jpg" alt="User Portrait" onclick="toggleDropdown()">
+                <div class="dropdown" id="userDropdown">
+                    <a class="dropdown-item" href="./profile.html"><i class="fas fa-user-edit"></i> Edit Profile</a>
+                    <a class="dropdown-item" href=""><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+            <div class="notification">
+                <i class="fa-regular fa-bell"></i>
+                <span class="badge">2</span>
+            </div>
+            <div class="dark-moon" id="theme-toggle">
+                <i class="fa fa-moon"></i>
+            </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <i class="fa-regular fa-house"></i>
+                        <div class="span-act">Dashboard</div>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="./CSD_Acct.html">
+                        <i class="fas fa-th-large"></i>
+                        <div class="span-act">Csd</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./casino.html">
+                        <i class="fa-solid fa-dungeon"></i>
+                        <div class="span-act">Casino</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html">
+                        <i class="fas fa-gear"></i>
+                        <div class="span-act">Settings</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="wallet-display">
+                <div class="wallet-card">
+                    <div class="amount-heading">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <p>Available balance</p>
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="amount-display">
+                        <div class="amount">
+                            <h2><span>$</span>0.00</h2>
+                        <a href="#">+Add Money</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="convert-card">
+                    <h3>CDS Converter</h3>
+                    <form action="">
+                        <select>
+                            <option>TSD</option>
+                            <option>CSD</option>
+                            <option>USD</option>
+                        </select>
+                        <input type="number" placeholder="0">
+                    </form>
+                    <div class="convert-icon">
+                        <i class="fa-solid fa-right-left"></i>
+                        <hr>
+                    </div>
+                    <form action="">
+                        <select>
+                            <option>CSD</option>
+                            <option>TSD</option>
+                            <option>USD</option>
+                        </select>
+                        <input type="number" placeholder="0">
+                    </form>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="tansaction">
+                <div class="transaction-nav">
+                    <h4>Transactions</h4>
+                    <a href="#">View All</a>
+                </div>
+
+                <div class="message-control">
+                    <div class="msgrow">
+                        <div class="msg-right">
+                            <div class="msgicon">
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <div class="msg-content">
+                                <h3>John Kelvin John</h3>
+                                <span>04:37 pm * 20 Nov 2024</span>
+                            </div>
+                        </div>
+                        <div class="msg-left">
+                            <p class="lost">-$200</p>
+                        </div>
+                    </div>
+                    <div class="msgrow">
+                        <div class="msg-right">
+                            <div class="msgicon">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </div>
+                            <div class="msg-content">
+                                <h3>John Kelvin John</h3>
+                                <span>04:37 pm * 20 Nov 2024</span>
+                            </div>
+                        </div>
+                        <div class="msg-left">
+                            <p class="won">+$200</p>
+                        </div>
+                    </div>
+                    <div class="msgrow">
+                        <div class="msg-right">
+                            <div class="msgicon">
+                                <i class="fa-solid fa-repeat"></i>
+                            </div>
+                            <div class="msg-content">
+                                <h3>John Kelvin John</h3>
+                                <span>04:37 pm * 20 Nov 2024</span>
+                            </div>
+                        </div>
+                        <div class="msg-left">
+                            <p class="won">+$200</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./asset/js/script.js"></script>
+</body>
+
+</html>

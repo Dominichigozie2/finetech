@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User dashboard</title>
+
+    <!-- ============ Custom CSS =================== -->
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <!-- ============ Font awesome link ===========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" />
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+</head>
+
+<body>
+
+
+    <div class="container row-container">
+        <div class="topbar">
+            <div class="logo">
+                <img src="./asset/img/logo.png" alt="">
+            </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars-progress"></i>
+            </div>
+            <div class="left-nav">
+                
+            <div class="user">
+                <img src="./asset/img/portrait.jpg" alt="User Portrait" onclick="toggleDropdown()">
+                <div class="dropdown" id="userDropdown">
+                    <a class="dropdown-item" href="./profile.html"><i class="fas fa-user-edit"></i> Edit Profile</a>
+                    <a class="dropdown-item" href=""><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+            <div class="notification">
+                <i class="fa-regular fa-bell"></i>
+                <span class="badge">2</span>
+            </div>
+            <div class="dark-moon" id="theme-toggle">
+                <i class="fa fa-moon"></i>
+            </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <i class="fa-regular fa-house"></i>
+                        <div class="span-act">Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./CSD_Acct.html">
+                        <i class="fas fa-th-large"></i>
+                        <div class="span-act">Csd</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./casino.html">
+                        <i class="fa-solid fa-dungeon"></i>
+                        <div class="span-act">Casino</div>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="./profile.html">
+                        <i class="fas fa-gear"></i>
+                        <div class="span-act">Settings</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="Deposit-container">
+                <div class="deposit-nav">
+                    <li class="active"><i class="fa-brands fa-cc-mastercard"></i><span>Visa/Mastercard</span>
+                    </li>
+                    <li ><i class="fa-brands fa-cc-apple-pay"></i><span>Apple Pay</span></li>
+                    <li ><i class="fa-solid fa-money-bill-transfer"></i><span>Bank Transfer</span></li>
+                    <li><i class="fa-solid fa-sack-dollar"></i><span>USDT</span></li>
+                </div>
+                <div class="deposit">
+                    <div class="depos-content deposit-content">
+                        <h1>Deposit</h1>
+                        <br>
+                        <h3>Card Details</h3>
+
+                        <div class="edit-fo">
+                            <form action="#">
+                                <div class="input-field">
+                                    <label for="name">Card Number</label>
+                                    <input type="text" placeholder="**** **** **** ****">
+                                </div>
+                                <div class="input-field">
+                                    <label for="name">Card Name</label>
+                                    <input type="text" placeholder="Last name">
+                                </div>
+                                
+                                <div class="input-field">
+                                    <div class="depot">
+                                        <div class="d-box">
+                                            <label for="number">Exp</label>
+                                            <input type="text" placeholder="MM/YY">
+                                        </div>
+                                        <div class="d-box">
+                                            <label for="number">CVC</label>
+                                            <input type="text" placeholder="000">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Amount</label>
+                                    <input type="text" placeholder="$00000">
+                                </div>
+
+                                <button>Withdraw</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="depos-content Apple-content">
+                        <h1>Deposit</h1>
+                        <br>
+                        <h3>Card Details</h3>
+
+                        <div class="edit-fo">
+                            <form action="#">
+                                <div class="input-field">
+                                    <label for="name">Card Number</label>
+                                    <input type="text" placeholder="**** **** **** ****">
+                                </div>
+                                <div class="input-field">
+                                    <label for="name">Card Name</label>
+                                    <input type="text" placeholder="Last name">
+                                </div>
+                                
+                                <div class="input-field">
+                                    <div class="depot">
+                                        <div class="d-box">
+                                            <label for="number">Exp</label>
+                                            <input type="text" placeholder="MM/YY">
+                                        </div>
+                                        <div class="d-box">
+                                            <label for="number">CVC</label>
+                                            <input type="text" placeholder="000">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Amount</label>
+                                    <input type="text" placeholder="$00000">
+                                </div>
+
+                                <button>Withdraw</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="depos-content bank-content">
+                        <h1>Deposit</h1>
+                        <br>
+                        <h3>Card Details</h3>
+
+                        <div class="edit-fo">
+                            <form action="#">
+                                <div class="input-field">
+                                    <label for="name">Card Number</label>
+                                    <input type="text" placeholder="**** **** **** ****">
+                                </div>
+                                <div class="input-field">
+                                    <label for="name">Card Name</label>
+                                    <input type="text" placeholder="Last name">
+                                </div>
+                                
+                                <div class="input-field">
+                                    <div class="depot">
+                                        <div class="d-box">
+                                            <label for="number">Exp</label>
+                                            <input type="text" placeholder="MM/YY">
+                                        </div>
+                                        <div class="d-box">
+                                            <label for="number">CVC</label>
+                                            <input type="text" placeholder="000">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Amount</label>
+                                    <input type="text" placeholder="$00000">
+                                </div>
+
+                                <button>Withdraw</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="depos-content usdt-content">
+                        <h1>Deposit</h1>
+                        <br>
+                        <h3>USDT</h3>
+
+                        <div class="edit-fo">
+                            <form action="#" id="copy-form">
+                                <div class="input-field">
+                                  <label for="address">Copy address</label>
+                                  <input type="text" id="address" placeholder="**** **** **** ****" value="00029836678368999xsj sbx7" readonly>
+                                </div>
+                                <button type="button" id="copy-button"><i class="fa-solid fa-copy"></i> Copy</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./asset/js/script.js"></script>
+</body>
+
+</html>

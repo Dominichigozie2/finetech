@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <!--============ css link ===========-->
+    <link rel="stylesheet" href="./asset/css/style.css">
+
+    <!-- ============ Font awesome link ===========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    <div class="modal" id="userModal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <h2>FAQ</h2>
+            <form id="userForm" class="faqForm">
+                
+                <input type="text" id="firstname" name="firstname" placeholder="first Name" required>
+                <br>
+                
+                <textarea placeholder="Add Your Answer"></textarea>
+                <br>
+                
+                <button type="submit">Add FAQ</button>
+            </form>
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="left">
+            <div class="logo">
+                <img src="./asset/img/logo.png" alt="">
+            </div>
+            <div class="side-bar">
+                <ul>
+                    <li><a href="./index.html"><i class="fa-solid fa-border-all"></i> <span>Dashboard</span></a></li>
+                    <label>User management</label>
+                    <li><a class="dropDownBtn"><i class="fa-solid fa-user"></i><span>user</span> 
+                        </a>
+                        <ul class="drop">
+                            <li><a href="./user.html">User</a></li>
+                            <li><a href="./admin.html">Admin permissions</a></li>
+                            <!-- <li><a href="">User permissions</a></li> -->
+                        </ul>
+                    </li>
+
+                    <label>trustgold management</label>
+                    <li> <a class="dropDownBtn"><i class="fa-solid fa-award"></i><span>TrustGold</span></a>
+                        <ul class="drop">
+                            <li><a href="./trustgoldpur.html">TrustGold Purchases</a></li>
+                            <li><a href="./ConversionM.html">Conversion Management</a></li>
+                            <li><a href="">TrustGold Reserves</a></li>
+                            <li><a href="./Transactionhistory.html">TrustGold Summary</a></li>
+                        </ul>
+                    </li>
+
+                    <label>CSD account management</label>
+                    <li> <a class="dropDownBtn"><i class="fa-solid fa-user-gear"></i><span>account</span></a>
+                        <ul class="drop">
+                            <li><a href="./accountbal.html">Account Balances</a></li>
+                            <li><a href="./Fundtransfers.html">Fund Transfers</a></li>
+                            <li><a href="./Transactionhistory.html">Transaction History</a></li>
+                            <li><a href="">Reservations</a></li>
+                        </ul>
+                    </li>
+
+                    <label>risk-free gambling management</label>
+                    <li><a class="dropDownBtn"><i class="fa-solid fa-dice"></i> <span>gambling</span></a>
+                        <ul class="drop">
+                            <li><a href="./FundApp.html">Fund Applications</a></li>
+                            <li><a href="./fundsoverview.html">Gambling Funds Overview</a></li>
+                            <li><a href="">Performance Monitoring</a></li>
+                        </ul>
+                    </li>
+                    <label>Payment & transactions</label>
+                        <li> <a class="dropDownBtn"><i class="fa-solid fa-trophy"></i><span>Rewards</span></a>
+                            <ul class="drop">
+                                <li><a href="./reward.html">Rewards Overview</a></li>
+                                <li><a href="">Inflation Tracking</a></li>
+                                <li><a href="./Referralmanagement.html">Referral Management</a></li>
+                                <li><a href="">Claim Referral</a></li>
+                            </ul>
+                        </li>
+                    <li> <a class="dropDownBtn"><i class="fa-solid fa-chart-simple"></i><span>transactions</span></a>
+                        <ul class="drop">
+                            <li><a href="./paymentgateway.html">Payment Gateway Setup</a></li>
+                            <li><a href="./transactionMoitor.html">Transaction Monitoring</a></li>
+                            <li><a href="./DisputeResolution.html">Dispute Resolution</a></li>
+                            <li><a href="./Transactionhistory.html">Transaction History</a></li>
+                            <li><a href="">Transaction Status</a></li>
+                        </ul>
+                    </li>
+                    <label>customer support</label>
+                    <li class="active"> <a class="dropDownBtn"><i class="fa-solid fa-headset"></i><span>support</span></a>
+                        <ul class="drop">
+                            <li><a href="./SupportTicket.html">Support Tickets</a></li>
+                            <li><a href="./livechat.html">Live Chat</a></li>
+                            <li><a href="./Referralmanagement.html">Referral Management</a></li>
+                            <li class="active"><a href="./faq.html">FAQs and Knowledge Base</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href=""><i class="fa-solid fa-bell"></i><span>notifacions</span></a></li>
+                    <li> <a class="dropDownBtn"><i class="fa-solid fa-gear"></i><span>settings</span></a>
+                        <ul class="drop">
+                            <li><a href="">System Settings</a></li>
+                            <li><a href="">Security Settings</a></li>
+                            <li><a href="">Audit Logs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <li class="logout"><a href=""><i class="fa-solid fa-right-from-bracket"></i> logout</a></li>
+        </div>
+        <div class="right">
+            <nav>
+                <div class="bar">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+                <div class="search-section">
+                    <form action="#">
+                        <input type="search" placeholder="Search here">
+                    </form>
+                </div>
+                <div class="nav-right">
+                    <div class="notifications">
+                        <span class="dropbtn"><i class="fa-solid fa-bell"></i></span>
+
+                        <div class="drop-down notify">
+                            <ul>
+                                <li><a href="#">notification</a> <span>1mins</span></li>
+                                <li><a href="#">notification</a> <span>1mins</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="admin">
+                        <div class="admin-details dropbtn">
+                            <div class="admin-image">
+                                <img src="./asset/img/portrait.jpg" alt="">
+                            </div>
+                            <div class="admin-info">
+                                <h4>john</h4>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+
+                        </div>
+                        <div class="drop-down">
+                            <ul>
+                                <li><a href="#">profile</a></li>
+                                <li><a href="#">logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+           
+            <div class="container">
+                <button class="modalBtn">Add FAQ</button>
+
+                <div class="table">
+                    <div class="span-2">
+                        <h3>Latest Transactions</h3>
+                        <div class="table-container">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>S/N</th>
+                                  <th>Title</th>
+                                  <th>Answer</th>
+                                  <th>Date</th>
+                                  <th>action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>How Does trust Gold Work</td>
+                                  <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, fugit!</td>
+                                  <td>1/2/20230</td>
+                                  <td class="edit">
+                                    <a class="btnModal" href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                                </td>
+                                </tr>
+                               
+                              </tbody>
+
+                            </table>
+
+                        </div>
+                        <div class="pagination">
+                            <li><a href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">.....</a></li>
+                            <li><a href="#">24</a></li>
+                            <li><a href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <footer>      
+            </footer> -->
+        </div>
+    </div>
+   
+
+    <script src="./asset/js/script.js"></script>
+</body>
+</html>

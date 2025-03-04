@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User dashboard</title>
+
+    <!-- ============ Custom CSS =================== -->
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <!-- ============ Font awesome link ===========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" />
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+</head>
+
+<body>
+
+    <div class="modal" id="userModal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+
+            <div class="trasactions-display">
+                <h3>Transfer from Dominic</h3>
+                 <div class="amount">$300.00</div>
+                 <small class="status success">
+                    <i class="fa fa-check"></i>
+                    <span class="success">successful</span>
+                 </small>
+            </div>
+
+            <div class="trans-details">
+                <h2>transaction details</h2>
+
+                <ul>
+                    <li>transaction type <span>Bank deposit</span></li>
+                    <li>Senders Details <span>Dominic Chigozie</span></li>
+                    <li>Transaction No. <span>2239u9u9499800</span></li>
+                    <li>Transaction No. <span>Dec 25th, 2023 09:34</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container row-container">
+        <div class="topbar">
+            <div class="logo">
+                <img src="./asset/img/logo.png" alt="">
+            </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars-progress"></i>
+            </div>
+            <div class="left-nav">
+                
+            <div class="user">
+                <img src="./asset/img/portrait.jpg" alt="User Portrait" onclick="toggleDropdown()">
+                <div class="dropdown" id="userDropdown">
+                    <a class="dropdown-item" href="./profile.html"><i class="fas fa-user-edit"></i> Edit Profile</a>
+                    <a class="dropdown-item" href=""><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+            <div class="notification">
+                <i class="fa-regular fa-bell"></i>
+                <span class="badge">2</span>
+            </div>
+            <div class="dark-moon" id="theme-toggle">
+                <i class="fa fa-moon"></i>
+            </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <i class="fa-regular fa-house"></i>
+                        <div class="span-act">Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./CSD_Acct.html">
+                        <i class="fas fa-th-large"></i>
+                        <div class="span-act">Csd</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./casino.html">
+                        <i class="fa-solid fa-dungeon"></i>
+                        <div class="span-act">Casino</div>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="./profile.html">
+                        <i class="fas fa-gear"></i>
+                        <div class="span-act">Settings</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="profile-container">
+                <div class="profile-nav">
+                    <li onclick="showProfile()" class="active"><i class="fa fa-user"></i><span>Profile Settings</span>
+                    </li>
+                    <li onclick="showPassword()"><i class="fa fa-lock"></i><span>Password</span></li>
+                    <li onclick="showVerifications()"><i class="fa-solid fa-certificate"></i><span>Verifications</span></li>
+                    <li onclick="showTrans()"><i class="fa-solid fa-wallet"></i><span>Transactions</span></li>
+                    <li onclick="showNotify()"><i class="fa-solid fa-bell"></i><span>Notifications</span> <p class="num">2</p></li>
+                </div>
+                <div class="profile">
+                    <div class="profile-content">
+                        <div class="profile-image-section">
+                            <div class="profile-image">
+                                <img src="./asset/img/portrait.jpg" alt="">
+                            </div>
+                            <div class="upload-button">
+                                <div class="upload-div">
+                                    <form action="#" class="editsetting">
+                                        <input type="file" id="file">
+                                        <label for="file" class="upload">Upload new</>
+                                    </form>
+                                </div>
+
+                                <a href="#" class="delete-btn">Delete avatar</a>
+                            </div>
+                        </div>
+                        <div class="edit-fo">
+                            <form action="#">
+                                <div class="input-field">
+                                    <label for="name">First Name</label>
+                                    <input type="text" placeholder="First name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="name">Last Name</label>
+                                    <input type="text" placeholder="Last name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="mail">Email</label>
+                                    <input type="text" placeholder="examples@gmail.com">
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Moblie number</label>
+                                    <input type="text" placeholder="100 399 0029">
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Gender</label>
+                                    <div class="gender">
+                                        <div class="g-box">
+                                            <input type="radio" name="#" id="">
+                                            <span>male</span>
+                                        </div>
+                                        <div class="g-box">
+                                            <input type="radio" name="#" id="">
+                                            <span>female</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">ID</label>
+                                    <input type="text" placeholder="1400 3599 0029">
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Country</label>
+                                    <input type="text" placeholder="Nigeria">
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Residence Address</label>
+                                    <input type="text" placeholder="Ib street Orogun Ibadan">
+                                </div>
+
+                                <button>Save changes</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="passwords">
+                        <form action="#">
+                            <div class="input-field">
+                                <label for="name">New Password</label>
+                                <input type="password" placeholder="20^w8w@89 xD">
+                            </div>
+
+                            <div class="input-field">
+                                <label for="name">Confirm Password</label>
+                                <input type="password" placeholder="20^w8w@89 xD">
+                            </div>
+
+                            <button>Save changes</button>
+                        </form>
+                    </div>
+
+                    <div class="verification">
+                        <h2>Verifications</h2>
+                        <br>
+                        <div class="verification-link">
+                            
+                            <div class="ver-box">
+                                <a href="#"><span><i class='bx bxs-shield-plus'></i> 2FA</span> <i class='bx bx-chevron-right'></i></a>
+                            </div>
+
+                            <div class="ver-box">
+                                <a href="#"><span><i class='bx bx-certification'></i> Verification</span> <i class='bx bx-chevron-right'></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="table transaction">
+                        <div class="span-2">
+                            <h3>Transaction history</h3>
+                            <br>
+                            <div class="table-container">
+                                <table>
+                                  <thead>
+                                    <tr>
+                                      <!-- <th>S/N</th> -->
+                                      <th>Amount</th>
+                                      <th>Status</th>
+                                      <th>Date</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>100,000</td>
+                                      <td class="success">successful</td>
+                                      <td>1/2/20230</td>
+                                      <td class="edit">
+                                        <a class="btnModal" href="#"><i class="fa-solid fa-eye success"></i></a>
+                                        
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>100,000</td>
+                                      <td class="success">successful</td>
+                                      <td>1/2/20230</td>
+                                      <td class="edit">
+                                        <a class="btnModal" href="#"><i class="fa-solid fa-eye success"></i></a>
+                                        
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>100,000</td>
+                                      <td class="success">successful</td>
+                                      <td>1/2/20230</td>
+                                      <td class="edit">
+                                        <a class="btnModal" href="#"><i class="fa-solid fa-eye success"></i></a>
+                                        
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>100,000</td>
+                                      <td class="success">successful</td>
+                                      <td>1/2/20230</td>
+                                      <td class="edit">
+                                        <a class="btnModal" href="#"><i class="fa-solid fa-eye success"></i></a>
+                                        
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>100,000</td>
+                                      <td class="success">successful</td>
+                                      <td>1/2/20230</td>
+                                      <td class="edit">
+                                        <a class="btnModal" href="#"><i class="fa-solid fa-eye success"></i></a>
+                                        
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>100,000</td>
+                                      <td class="success">successful</td>
+                                      <td>1/2/20230</td>
+                                      <td class="edit">
+                                        <a class="btnModal" href="#"><i class="fa-solid fa-eye success"></i></a>
+                                        
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>100,000</td>
+                                      <td class="success">successful</td>
+                                      <td>1/2/20230</td>
+                                      <td class="edit">
+                                        <a class="btnModal" href="#"><i class="fa-solid fa-eye success"></i></a>
+                                        
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>100,000</td>
+                                      <td class="success">successful</td>
+                                      <td>1/2/20230</td>
+                                      <td class="edit">
+                                        <a class="btnModal" href="#"><i class="fa-solid fa-eye success"></i></a>
+                                        
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>100,000</td>
+                                      <td class="success">successful</td>
+                                      <td>1/2/20230</td>
+                                      <td class="edit">
+                                        <a class="btnModal" href="#"><i class="fa-solid fa-eye success"></i></a>
+                                        
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>100,000</td>
+                                      <td class="success">successful</td>
+                                      <td>1/2/20230</td>
+                                      <td class="edit">
+                                        <a class="btnModal" href="#"><i class="fa-solid fa-eye success"></i></a>
+                                        
+                                    </td>
+                                    </tr>
+                                  </tbody>
+    
+                                </table>
+    
+                            </div>
+                            <div class="pagination">
+                                <li><a href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">.....</a></li>
+                                <li><a href="#">24</a></li>
+                                <li><a href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+                            </div>
+                    </div>
+
+                    </div>
+
+                    <div class="notificate">
+                    <div class="notification-nav">
+                        <select>
+                            <option value="">All</option>
+                            <option value="">Read</option>
+                            <option value="">Unread</option>
+                        </select>
+
+                    </div>
+                    
+                    <div class="message-container">
+                        <div class="message-box">
+                            <i class="fa fa-times"></i>
+                            <div class="message-content">
+                                <span>update</span>
+                                <h5>A New casino game pack has been added</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur tenetur neque delectus iure deserunt.</p>
+                            </div>
+                            <div class="date">
+                                <i class="fa fa-clock"></i>
+                                <h6>24 Nov 2018 at 9:30 AM</h6>
+                            </div>
+                        </div>
+                        <div class="message-box">
+                            <i class="fa fa-times"></i>
+                            <div class="message-content">
+                                <span>update</span>
+                                <h5>A New casino game pack has been added</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur tenetur neque delectus iure deserunt.</p>
+                            </div>
+                            <div class="date">
+                                <i class="fa fa-clock"></i>
+                                <h6>24 Nov 2018 at 9:30 AM</h6>
+                            </div>
+                        </div>
+                        <div class="message-box">
+                            <i class="fa fa-times"></i>
+                            <div class="message-content">
+                                <span>update</span>
+                                <h5>A New casino game pack has been added</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur tenetur neque delectus iure deserunt.</p>
+                            </div>
+                            <div class="date">
+                                <i class="fa fa-clock"></i>
+                                <h6>24 Nov 2018 at 9:30 AM</h6>
+                            </div>
+                        </div>
+                        <div class="message-box">
+                            <i class="fa fa-times"></i>
+                            <div class="message-content">
+                                <span>update</span>
+                                <h5>A New casino game pack has been added</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur tenetur neque delectus iure deserunt.</p>
+                            </div>
+                            <div class="date">
+                                <i class="fa fa-clock"></i>
+                                <h6>24 Nov 2018 at 9:30 AM</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <div class="msg-container">
+                        <h2>A New casino game pack has been added</h2>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempore architecto, non quos consequatur minus. Voluptas nesciunt corporis adipisci numquam a ex tenetur sed. Tempore, accusantium corrupti. Et ipsum ducimus voluptatum provident eum delectus dolorem tempore alias rem magni, sequi voluptates enim ipsam laboriosam impedit eos exercitationem facere corrupti quidem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                320: { // For small screens (mobile)
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                640: { // For medium screens (tablet)
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: { // For large screens (desktop)
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
+    <script src="./asset/js/modal.js"></script>
+    <script src="./asset/js/script.js"></script>
+</body>
+
+</html>

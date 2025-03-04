@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User dashboard</title>
+
+    <!-- ============ Custom CSS =================== -->
+     <link rel="stylesheet" href="./asset/css/style.css">
+    <!-- ============ Font awesome link ===========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" />
+
+    <!-- ============ Swiper CSS Links =================== -->
+    <!-- <link href="https://unpkg.com/swiper@9.0.0/swiper-bundle.min.css" rel="stylesheet"> -->
+    <!-- Swiper JS Links -->
+    <!-- <script src="https://unpkg.com/swiper@9.0.0/swiper-bundle.min.js"></script> -->
+</head>
+<body>
+    <div class="container row-container">
+        <div class="topbar">
+            <div class="logo">
+                <img src="./asset/img/logo.png" alt="">
+            </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars-progress"></i>
+            </div>
+            <div class="user">
+                <img src="./asset/img/portrait.jpg" alt="User Portrait" onclick="toggleDropdown()">
+                <div class="dropdown" id="userDropdown">
+                    <a class="dropdown-item" href=""><i class="fas fa-user-edit"></i> Edit Profile</a>
+                    <a class="dropdown-item" href=""><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+            <div class="notification">
+                <i class="fa-regular fa-bell"></i>
+                <span class="badge"></span>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li class="active">
+                    <a href="./index.html">
+                        <i class="fa-regular fa-house"></i>
+                        <div class="span-act">Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./CSD_Acct.html">
+                        <i class="fas fa-th-large"></i>
+                        <div class="span-act">Csd</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./dashboard_2.html">
+                        <i class="fa-solid fa-dungeon"></i>
+                        <div class="span-act">Casino</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./transactions.html">
+                        <i class="fa-solid fa-wallet"></i>
+                        <div class="span-act">Transactions</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./transactions.html">
+                        <i class="fa-solid fa-bell"></i>
+                        <div class="span-act">Notification</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./dashboard_3.html">
+                        <i class="fas fa-gear"></i>
+                        <div class="span-act">Settings</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="cards container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="slider-container">
+                            <!-- <div class="swiper-wrapper"></div> -->
+                            <div class="slides">
+                                <div class="slide slide-1 active">
+                                    <h1>Risk-Free Gambling</h1>
+                                    <p>Brief description of how risk-free <br> gambling works and what it's all about</p>
+                                    <a href="#" class="btn">Apply</a>
+                                </div>
+                                <div class="slide slide-2">
+                                    <h1>Risk-Free Gambling</h1>
+                                    <p>Brief description of how risk-free <br> gambling works and what it's all about</p>
+                                    <a href="#" class="btn">Apply</a>
+                                </div>
+                                <div class="slide slide-3">
+                                    <h1>Risk-Free Gambling</h1>
+                                    <p>Brief description of how risk-free <br> gambling works and what it's all about</p>
+                                    <a href="#" class="btn">Apply</a>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <span class="dot active" data-index="0"></span>
+                                <span class="dot" data-index="1"></span>
+                                <span class="dot" data-index="2"></span>
+                            </div>                    
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6" style="height: 100%;">
+                        <div class="csd_card">
+                            <div class="csd_cardbody">
+                                <div class="csd_cardcontent">
+                                    <a href="">
+                                        <i class="fa-regular fa-user"></i>
+                                        <h3>Csd Acct</h3>
+                                    </a>
+                                </div>
+                                <div class="csd_cardcontent">
+                                    <a href="">
+                                        <i class="fa-regular fa-user"></i>
+                                        <h3>Account</h3>
+                                    </a>
+                                </div>
+                                <div class="csd_cardcontent">
+                                    <a href="">
+                                        <i class="fa-solid fa-trophy"></i>
+                                        <h3>Rewards</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="down_card">
+                            <div class="down_cardbody">
+                                <div class="title">
+                                    <h4>Download from playstore</h4>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6" style="height: 100%;">
+                        <div class="gam_card">
+                            <div class="gam_cardbody">
+                                <div class="gam_cardcontent">
+                                    <a href="">
+                                        <i class="fa-solid fa-rotate"></i>
+                                        <h3>Convert</h3>
+                                    </a>
+                                </div>
+                                <div class="gam_cardcontent">
+                                    <a href="">
+                                        <i class="fa-solid fa-dice"></i>
+                                        <h3>Gambling</h3>
+                                    </a>
+                                </div>
+                                <div class="gam_cardcontent">
+                                    <a href="">
+                                        <i class="fa-solid fa-money-bill"></i>
+                                        <h3>Payment</h3>
+                                    </a>
+                                </div>
+                                <div class="gam_cardcontent">
+                                    <a href="">
+                                        <i class="fa-solid fa-dungeon"></i>
+                                        <h3>Casino</h3>
+                                    </a>
+                                </div>
+                                <div class="gam_cardcontent">
+                                    <a href="">
+                                        <i class="fa-solid fa-headset"></i>
+                                        <h3>Support</h3>
+                                    </a>
+                                </div>
+                                <div class="gam_cardcontent">
+                                    <a href="">
+                                        <i class="fa-brands fa-windows"></i>
+                                        <h3>Dashboard</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="./asset/js/script.js"></script>
+</body>
+</html>

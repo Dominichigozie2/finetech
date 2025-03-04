@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User dashboard</title>
+
+    <!-- ============ Custom CSS =================== -->
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <!-- ============ Font awesome link ===========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+</head>
+
+<body>
+    <div class="container row-container">
+        <div class="topbar">
+            <div class="logo">
+                <img src="./asset/img/logo.png" alt="">
+            </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars-progress"></i>
+            </div>
+            <div class="left-nav">
+                
+            <div class="user">
+                <img src="./asset/img/portrait.jpg" alt="User Portrait" onclick="toggleDropdown()">
+                <div class="dropdown" id="userDropdown">
+                    <a class="dropdown-item" href="./profile.html"><i class="fas fa-user-edit"></i> Edit Profile</a>
+                    <a class="dropdown-item" href=""><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+            <div class="notification">
+                <i class="fa-regular fa-bell"></i>
+                <span class="badge">2</span>
+            </div>
+            <div class="dark-moon" id="theme-toggle">
+                <i class="fa fa-moon"></i>
+            </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <i class="fa-regular fa-house"></i>
+                        <div class="span-act">Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./CSD_Acct.html">
+                        <i class="fas fa-th-large"></i>
+                        <div class="span-act">Csd</div>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="./casino.html">
+                        <i class="fa-solid fa-dungeon"></i>
+                        <div class="span-act">Casino</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html">
+                        <i class="fas fa-gear"></i>
+                        <div class="span-act">Settings</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <div class="casino-page">
+
+            <div class="search-casino">
+                <div class="input-field">
+                    <input type="search" placeholder="search">
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="casino-container">
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/flight.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/3d-casino-roulette.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/pair-dice-that-are-table-with-red-lights-background_916191-233227.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/three-dimensional-casino-item_23-2151067304.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/flight.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/flight.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/3d-casino-roulette.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/pair-dice-that-are-table-with-red-lights-background_916191-233227.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/three-dimensional-casino-item_23-2151067304.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/flight.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/flight.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/3d-casino-roulette.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/pair-dice-that-are-table-with-red-lights-background_916191-233227.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/three-dimensional-casino-item_23-2151067304.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/flight.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/flight.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/3d-casino-roulette.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/pair-dice-that-are-table-with-red-lights-background_916191-233227.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/three-dimensional-casino-item_23-2151067304.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/flight.jpg" alt="">
+                  </div>
+                  <div class="casino-card">
+                    <div class="casino-card-content">
+                        <h6>Crash <span><img src="./asset/img/image 17.png" alt=""> Nobody bets yet</span></h6>
+                        <div class="counts">
+                            <i class="fa fa-user"></i>
+                            <p>54</p>
+                        </div>
+                    </div>
+                    <img src="./asset/img/casino-icon/flight.jpg" alt="">
+                  </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./asset/js/script.js"></script>
+</body>
+
+</html>
