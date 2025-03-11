@@ -625,6 +625,25 @@ body{
         }
         
     }
+
+
+
+    @media(width < 480px){
+        .about-content{
+            h2{
+                font-size: 14px !important;
+            }
+
+            .about-btns{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            
+        }
+    }
+
     @media(width < 350px){        
         .about-container{
             grid-template-columns: repeat(1,1fr);
